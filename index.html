@@ -1,12 +1,25 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Athira S. | Physics</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
+
 
     <!-- Header -->
     <header>
@@ -30,26 +43,46 @@
 
 
     <!-- About -->
-    <section>
+    <section id="about" class="reveal">
 
         <h2>About Me</h2>
 
         <p>
-            I am a PhD researcher in the Department of Physics
-            at the Indian Institute of Technology Jodhpur.
+            I am a PhD Research Scholar in the Department of Physics
+            at the Indian Institute of Technology Jodhpur, fascinated
+            by the mysteries of the Universe and the extraordinary
+            physics of its most extreme objects.
         </p>
 
         <p>
-            My research focuses on theoretical astrophysics,
-            neutron stars, dense matter, hyperons and
-            gravitational waves.
+            My research explores theoretical astrophysics, with a
+            particular focus on neutron stars, dense matter, and
+            exotic constituents such as hyperons and antikaon
+            condensates. I am interested in understanding how
+            these constituents influence neutron-star structure,
+            stability, oscillations, and gravitational-wave signatures.
+        </p>
+
+    </section>
+
+
+    <!-- Inspirational Quote -->
+    <section id="quote" class="reveal">
+
+        <p class="quote-text">
+            "For my part I know nothing with any certainty,
+            but the sight of the stars makes me dream."
+        </p>
+
+        <p class="quote-author">
+            — Vincent van Gogh
         </p>
 
     </section>
 
 
     <!-- Research -->
-    <section>
+    <section id="research" class="reveal">
 
         <h2>Research Interests</h2>
 
@@ -65,7 +98,7 @@
 
 
     <!-- Contact -->
-    <section>
+    <section id="contact" class="reveal">
 
         <h2>Contact</h2>
 
@@ -77,12 +110,41 @@
     </section>
 
 
+    <!-- Footer -->
     <footer>
 
         <p>© 2026 Athira S.</p>
 
     </footer>
+    
+<script>
+
+const revealElements = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach(element => {
+    observer.observe(element);
+});
+
+</script>
+
+    
 
 </body>
+
+
 
 </html>
