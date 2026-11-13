@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CV | Athira S.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>Athira S.</h1>
+
+        <p>
+            PhD Researcher | Department of Physics | IIT Jodhpur
+        </p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CV Section -->
+
+    <section class="cv-section">
+
+        <h2>Curriculum Vitae</h2>
+
+        <p>
+            My academic background, research experience,
+            publications and professional activities.
+        </p>
+
+        <!-- Download CV -->
+
+<!--        <a href="Athira_CV.pdf"
+<!--           download
+           class="cv-button">
+            Download CV (PDF)
+        </a>
+
+        <!-- Display CV -->
+
+    <div class="cv-buttons">
+
+        <a href="Athira_CV.pdf" target="_blank" class="cv-btn">
+            <i class="fa-solid fa-eye"></i> View CV
+        </a>
+
+<!--        <a href="Athira_CV.pdf" download class="cv-btn">
+            <i class="fa-solid fa-download"></i> Download CV
+        </a>  -->
+
+    </div>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 Athira S.</p>
+    </footer>
+
+
+<script>
+
+    const revealElements = document.querySelectorAll(
+        'section, .research-content, footer'
+    );
+
+    revealElements.forEach(element => {
+        element.classList.add('reveal');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    revealElements.forEach(element => {
+        observer.observe(element);
+    });
+
+</script>
+</body>
+
+</html>
+
