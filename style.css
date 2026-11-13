@@ -1,26 +1,42 @@
+
+/* General Page Styling */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
-    color: #333;
-    line-height: 1.6;
+    color: white;
+    line-height: 1.8;
+
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
 /* Header */
 
 header {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
     text-align: center;
-    padding: 50px 20px;
-    background: #eeeeee;
+    padding: 30px;
 }
 
 header h1 {
+    font-family: 'Poppins', sans-serif;
     font-size: 42px;
+    font-weight: 600;
+    letter-spacing: 1px;
     margin-bottom: 10px;
+    color: white;
 }
 
 header p {
+    font-family: 'Lato', sans-serif;
     font-size: 18px;
+    color: white;
 }
 
 
@@ -28,33 +44,366 @@ header p {
 
 nav {
     margin-top: 30px;
+    color: white;
 }
 
 nav a {
-    margin: 0 15px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    margin: 15px;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d6bd91;
 }
 
 
 /* Sections */
 
 section {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 0 25px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px;
+    color: white;
 }
 
 h2 {
-    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* About Section */
+
+#about {
+    max-width: 950px;
+    text-align: justify;
+}
+
+
+/* Inspirational Quote */
+
+#quote {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 35px 30px;
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.45);
+    border-left: 3px solid #d6bd91;
+    border-radius: 5px;
+}
+
+.quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: #f5e9d5;
+}
+
+.quote-author {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #d6bd91;
+    margin-top: 15px;
+}
+
+
+/* Research Section */
+
+#research {
+    max-width: 950px;
+}
+
+#research li {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    line-height: 2;
+}
+
+
+/* Contact Section */
+
+#contact {
+    text-align: center;
 }
 
 
 /* Footer */
 
 footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
     text-align: center;
+    padding: 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+        font-size: 13px;
+    }
+
+    section {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .quote-text {
+        font-size: 24px;
+    }
+
+    #quote {
+        margin: 25px 15px;
+        padding: 25px 18px;
+    }
+}
+
+
+/* Research layout */
+
+.research {
+    background: rgba(255, 255, 255, 0.94);
+    max-width: 1100px;
+    margin: 30px auto;
     padding: 30px;
-    background: #eeeeee;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.research-content {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.research-text {
+    flex: 1.4;
+}
+
+.research-text h2 {
+    color: #17365D;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.research-text p {
+    line-height: 1.8;
+    text-align: justify;
+    color: #333;
+}
+
+.research-image {
+    flex: 1;
+    text-align: center;
+}
+
+.research-image img {
+    width: 100%;
+    max-width: 380px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.research-image p {
+    font-size: 13px;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+    .research-content {
+        flex-direction: column;
+    }
+
+    .research-image img {
+        max-width: 100%;
+    }
+}
+.research.alternate .research-content {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 700px) {
+    .research.alternate .research-content {
+        flex-direction: column;
+    }
+}
+
+/* CV Page */
+
+.cv-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.cv-section h2 {
+    color: white;
+}
+
+.cv-section p {
+    color: white;
+    margin-bottom: 25px;
+}
+
+/* Download Button */
+
+.cv-button {
+    display: inline-block;
+    background: #17365D;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.cv-button:hover {
+    background: #28578c;
+}
+
+/* PDF Viewer */
+
+.cv-viewer {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cv-viewer iframe {
+    width: 100%;
+    height: 850px;
+    border: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+    .cv-viewer iframe {
+        height: 600px;
+    }
+}
+#contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.contact-container p {
+    margin: 12px 0;
+}
+
+.contact-container a {
+    color: #80d8ff;
+    text-decoration: none;
+}
+
+.contact-container a:hover {
+    text-decoration: underline;
+}
+
+
+/* Welcome Pop-up Overlay */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+/* Scroll Reveal Animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(70px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+.cv-section {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 40px auto;
+}
+
+.cv-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.cv-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #1d3557;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.cv-btn:hover {
+    background: #457b9d;
+    transform: translateY(-3px);
 }
