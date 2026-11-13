@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Publications | Athira S.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>Athira S.</h1>
+
+        <p>
+            PhD Researcher | Department of Physics | IIT Jodhpur
+        </p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Publications -->
+
+    <section>
+
+        <h2>Publications</h2>
+
+        <p>
+            My research focuses on theoretical astrophysics,
+            neutron stars and the physics of dense matter.
+            Below is a list of my research publications.
+        </p>
+
+    </section>
+
+
+    <!-- Publication 1 -->
+
+    <section class="publication">
+
+        <h2>
+            1. Kaon-meson coupling from SU(3) flavour symmetry
+            and application to antikaon condensed dense
+            matter in neutron star
+        </h2>
+
+        <p>
+            <strong>Authors:</strong>
+            Athira S., Monika Sinha, Vivek Baruah Thapa
+            and Vishal Parmar
+        </p>
+
+        <p>
+            <strong>Journal:</strong>
+            <i>Journal of Cosmology and Astroparticle Physics</i>,
+            2025 (10), 037 (2025).
+        </p>
+
+        <p>
+            <strong>DOI:</strong>
+            <a href="https://doi.org/10.1088/1475-7516/2025/10/037"
+               target="_blank">
+                10.1088/1475-7516/2025/10/037
+            </a>
+        </p>
+
+        <p>
+            <a href="https://doi.org/10.1088/1475-7516/2025/10/037"
+               target="_blank">
+                View Published Paper
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- Publication 2 -->
+
+    <section class="publication">
+
+        <h2>
+            2. r-Mode Stabilization in Rotating Hyperon-Rich
+            Neutron Stars and Its Implications for GW190814
+        </h2>
+
+        <p>
+            <strong>Authors:</strong>
+            Athira S. and Monika Sinha
+        </p>
+
+        <p>
+            <strong>Journal:</strong>
+            <i>Physical Review D</i>, 113, 063011 (2026).
+        </p>
+
+        <p>
+            <strong>DOI:</strong>
+            <a href="https://doi.org/10.1103/17rl-4tyq"
+               target="_blank">
+                10.1103/17rl-4tyq
+            </a>
+        </p>
+
+        <p>
+            <a href="https://doi.org/10.1103/17rl-4tyq"
+               target="_blank">
+                View Published Paper
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- Publication 3 -->
+
+    <section class="publication">
+
+        <h2>
+            3. Neutron star matter with hyperons:
+            Bayesian comparison of nucleonic and
+            SU(6)/SU(3) hyperonic models
+        </h2>
+
+        <p>
+            <strong>Authors:</strong>
+            Athira S., Vishal Parmar, Monika Sinha
+            and Ignazio Bombaci
+        </p>
+
+        <p>
+            <strong>Journal:</strong>
+            <i>Physical Review C</i>, 114, 035802 (2026).
+        </p>
+
+        <p>
+            <strong>DOI:</strong>
+            <a href="https://doi.org/10.1103/6jzv-s7dq"
+               target="_blank">
+                10.1103/6jzv-s7dq
+            </a>
+        </p>
+
+        <p>
+            <a href="https://doi.org/10.1103/6jzv-s7dq"
+               target="_blank">
+                View Published Paper
+            </a>
+        </p>
+
+    </section>
+    
+     <!-- Publication 4 -->
+
+    <section class="publication">
+
+        <h2>
+            4. Influence of  Delta  resonances in hyperonic neutron stars on
+    gravitational-wave inspiral signatures
+        </h2>
+
+        <p>
+            <strong>Authors:</strong>
+            Athira S., Vivek Baruah Thapa and Monika Sinha
+             
+        </p>
+
+        <p>
+            <strong>Journal:</strong>
+            <i>Physical Review D</i>, 114, 035802 (2026).
+        </p>
+
+        <p>
+            <strong>DOI:</strong>
+            <a href="https://doi.org/10.1103/6jzv-s7dq"
+               target="_blank">
+                10.1103/6jzv-s7dq
+            </a>
+        </p>
+
+        <p>
+            <a href="https://doi.org/10.1103/6jzv-s7dq"
+               target="_blank">
+                View Published Paper
+            </a>
+        </p>
+
+    </section>
+
+
+    <footer>
+
+        <p>© 2026 Athira S.</p>
+
+    </footer>
+
+<script>
+
+    const revealElements = document.querySelectorAll(
+        'section, .research-content, footer'
+    );
+
+    revealElements.forEach(element => {
+        element.classList.add('reveal');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    revealElements.forEach(element => {
+        observer.observe(element);
+    });
+
+</script>
+</body>
+
+</html>
